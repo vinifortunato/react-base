@@ -1,8 +1,10 @@
+import * as Style from './Footer.style';
+
 const Footer = () => {
   return (
-    <footer>
-      <p>All rights reserved.</p>
-    </footer>
+    <Style.Wrapper>
+      <Style.Copyrights>All rights reserved.</Style.Copyrights>
+    </Style.Wrapper>
   )
 }
 

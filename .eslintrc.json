@@ -19,9 +19,9 @@
     "react"
   ],
   "rules": {
+    "import/prefer-default-export": 0,
     "react/react-in-jsx-scope": "off",
-    "react/function-component-definition": [
-      "on", {
+    "react/function-component-definition": [0, {
         "namedComponents": "arrow-function"
       }
     ]

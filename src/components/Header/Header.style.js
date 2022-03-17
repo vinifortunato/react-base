@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.header`
+const Wrapper = styled.header`
   background-color: crimson;
 `;
+
+export default Wrapper;

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import DefaultInput from '../components/DefaultInput';
+import { Header } from '../components';
 
 const LoginPage = () => {
   const { handleSubmit, control } = useForm({
@@ -16,6 +17,7 @@ const LoginPage = () => {
 
   return (
     <div>
+      <Header />
       <h1>Login</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller

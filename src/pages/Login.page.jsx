@@ -1,9 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import DefaultInput from '../components/DefaultInput';
 import { Header } from '../components';
+import userActions from '../store/modules/user/user.actions';
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const { handleSubmit, control } = useForm({
     defaultValues: {
       email: 'teste@teste.com',
@@ -12,7 +17,10 @@ const LoginPage = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    const { email, password } = data;
+    dispatch(userActions.setUser('Vinicius', email, password));
+
+    navigate('/lobby');
   };
 
   return (
